@@ -66,7 +66,7 @@ function ChatRoom() {
         lo: "huiiiiiiii",
         pushServerSubscriptionId
       });
-      fetch("http://localhost:4000/api/subcscribe", {
+      fetch("https://31.173.82.176:4000/api/subcscribe", {
         method: "POST", // *GET, POST, PUT, DELETE, etc.
         headers: {
           "Content-Type": "application/json"
@@ -104,7 +104,7 @@ function ChatRoom() {
   function getMessages() {
     console.log(messages);
     if (chatSelect != false) {
-      fetch("http://localhost:4000/api/messages", {
+      fetch("https://31.173.82.176:4000/api/messages", {
         method: "POST", // *GET, POST, PUT, DELETE, etc.
         headers: {
           "Content-Type": "application/json"
@@ -140,7 +140,7 @@ function ChatRoom() {
     }
   }
   function getChats() {
-    fetch("http://31.173.82.176:4000/api/chats", {
+    fetch("https://31.173.82.176:4000/api/chats", {
       method: "GET", // *GET, POST, PUT, DELETE, etc.
       headers: {
         "Content-Type": "application/json"
@@ -157,7 +157,7 @@ function ChatRoom() {
       });
   }
   function getFirstChat() {
-    fetch("http://31.173.82.176:4000/api/chats", {
+    fetch("https://31.173.82.176:4000/api/chats", {
       method: "GET", // *GET, POST, PUT, DELETE, etc.
       headers: {
         "Content-Type": "application/json"
@@ -229,7 +229,7 @@ function ChatRoom() {
         aSub: sub
       })
     );
-    fetch("http://31.173.82.176:4000/api/subcscribe", {
+    fetch("https://31.173.82.176:4000/api/subcscribe", {
       method: "POST", // *GET, POST, PUT, DELETE, etc.
       headers: {
         "Content-Type": "application/json"
@@ -256,7 +256,7 @@ function ChatRoom() {
   /* adds a new message to the chatroom */
   const sendMessage = (sender, senderAvatar, message) => {
     console.log(pushServerSubscriptionId);
-    fetch("http://31.173.82.176:4000/api/chat", {
+    fetch("https://31.173.82.176:4000/api/chat", {
       method: "POST", // *GET, POST, PUT, DELETE, etc.
       headers: {
         "Content-Type": "application/json"
